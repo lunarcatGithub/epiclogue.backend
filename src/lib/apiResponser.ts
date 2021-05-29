@@ -1,4 +1,4 @@
-import { Response } from 'express';
+import { Response } from 'express'
 
 /**
  * @description 통합 응답 객체
@@ -19,15 +19,15 @@ export default (
     result: 'ok',
     status,
     data,
-  };
+  }
 
   if (status > 399) {
-    output['result'] = 'error';
+    output['result'] = 'error'
   }
 
   if (message) {
-    output = { ...output, message };
+    output = { ...output, message }
   }
 
-  return res.status(status).json(output);
-};
+  return res.status(status).json(output)
+}

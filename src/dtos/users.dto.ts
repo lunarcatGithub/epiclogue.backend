@@ -1,82 +1,82 @@
-import { SnsType } from './global.enums';
+import { SnsType } from './global.enums'
 
 export interface JoinDto {
-  email: string;
-  userPw: string;
-  userPwRe: string;
-  userLang: number;
-  userNick: string;
+  email: string
+  userPw: string
+  userPwRe: string
+  userLang: number
+  userNick: string
 }
 
 export interface UpdateUserDto {
-  screenId?: string;
-  intro?: string;
-  nickname?: string;
-  banner?: ImageDto;
-  profile?: ImageDto;
+  screenId?: string
+  intro?: string
+  nickname?: string
+  banner?: ImageDto
+  profile?: ImageDto
 }
 
 export interface ImageDto {
-  origin?: string;
-  thumbnail?: string;
+  origin?: string
+  thumbnail?: string
 }
 
 export interface LoginDto {
-  email: string;
-  userPw: string;
+  email: string
+  userPw: string
 }
 
 export interface ChangePasswordDto {
-  email: string;
-  userPwNew: string;
-  userPwNewRe: string;
-  token: string;
+  email: string
+  userPwNew: string
+  userPwNewRe: string
+  token: string
 }
 
 export interface SnsJoinDto {
-  uid: string;
-  email: string;
-  profile: string;
-  name: string;
-  displayLanguage: number;
-  snsType: SnsType;
+  uid: string
+  email: string
+  profile: string
+  name: string
+  displayLanguage: number
+  snsType: SnsType
 }
 
 export interface SnsLoginDto {
-  snsData: GoogleLoginDto | FacebookLoginDto;
-  snsType: SnsType;
-  userLang: number;
+  snsData: GoogleLoginDto | FacebookLoginDto
+  snsType: SnsType
+  userLang: number
 }
 
 export interface GoogleLoginDto {
-  profileObj: GoogleProfileDto;
+  profileObj: GoogleProfileDto
 }
 
 export interface FacebookLoginDto {
-  id: string;
-  email: string;
-  name: string;
+  id: string
+  email: string
+  name: string
 }
 
 export interface GoogleProfileDto {
-  googleId: string;
-  email: string;
-  imageUrl: string;
-  name: string;
+  googleId: string
+  email: string
+  imageUrl: string
+  name: string
 }
 
 export interface UserProfileDto {
-  screenId?: string;
-  intro?: string;
-  displayLanguage?: number;
-  banner?: object;
-  profile?: object;
+  screenId?: string
+  intro?: string
+  displayLanguage?: number
+  banner?: object
+  profile?: object
 }
 
 export interface UserTokenDto {
-  _id: string;
-  isConfirmed: boolean;
-  isAdmin: boolean;
-  iat: number;
-  exp: number;
+  _id: string
+  isConfirmed: boolean
+  isAdmin: boolean
+  iat: number
+  exp: number
 }

@@ -1,5 +1,5 @@
-import { model, Schema, Document } from 'mongoose';
-import { UserEntity } from '../domains/users.entity';
+import { model, Schema, Document } from 'mongoose'
+import { UserEntity } from '../domains/users.entity'
 
 const userImageSchema = {
   origin: {
@@ -9,9 +9,8 @@ const userImageSchema = {
   thumbnail: {
     type: String,
     default: null,
-
   },
-};
+}
 
 const userSchema: Schema = new Schema({
   nickname: { type: String, required: true },
@@ -32,8 +31,8 @@ const userSchema: Schema = new Schema({
   token: { type: String, default: null },
   snsId: { type: String },
   snsType: { type: String, default: 'normal' },
-});
+})
 
-const userModel = model<UserEntity & Document>('User', userSchema);
+const userModel = model<UserEntity & Document>('User', userSchema)
 
-export default userModel;
+export default userModel

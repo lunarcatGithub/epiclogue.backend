@@ -1,8 +1,8 @@
-import { plainToClass } from 'class-transformer';
-import { validate, ValidationError } from 'class-validator';
-import { RequestHandler, Response, Request, NextFunction } from 'express';
+import { plainToClass } from 'class-transformer'
+import { validate, ValidationError } from 'class-validator'
+import { RequestHandler, Response, Request, NextFunction } from 'express'
 
-import { NotFoundException } from '../lib/exceptions';
+import { NotFoundException } from '../lib/exceptions'
 
 function inputValidator<T>(type: any): RequestHandler {
   return (req: Request, res: Response, next: NextFunction) => {
@@ -10,13 +10,13 @@ function inputValidator<T>(type: any): RequestHandler {
       if (errors.length > 0) {
         const message = errors
           .map((error: ValidationError) => Object.values(error.constraints))
-          .join(', ');
-        next(new NotFoundException(message));
+          .join(', ')
+        next(new NotFoundException(message))
       } else {
-        next();
+        next()
       }
-    });
-  };
+    })
+  }
 }
 
-export default inputValidator;
+export default inputValidator

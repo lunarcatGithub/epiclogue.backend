@@ -7,11 +7,11 @@ export class BadRequestException extends Error {
    * @description
    * The server could not understand the request due to invalid syntax.
    */
-  message: string;
-  status: number = 400;
+  message: string
+  status: number = 400
   constructor(message: string = 'BadRequest') {
-    super(message);
-    this.message = message;
+    super(message)
+    this.message = message
   }
 }
 
@@ -25,11 +25,11 @@ export class UnauthorizedException extends Error {
    * Although the HTTP standard specifies "unauthorized", semantically this response means
    * "unauthenticated". That is, the client must authenticate itself to get the requested response.
    */
-  message: string;
-  status: number = 401;
+  message: string
+  status: number = 401
   constructor(message: string = 'Unauthorized') {
-    super(message);
-    this.message = message;
+    super(message)
+    this.message = message
   }
 }
 
@@ -44,11 +44,11 @@ export class ForbiddenException extends Error {
    * that is, it is unauthorized, so the server is refusing to give the requested resource.
    * Unlike 401, the client's identity is known to the server.
    */
-  message: string;
-  status: number = 403;
+  message: string
+  status: number = 403
   constructor(message: string = 'Forbidden') {
-    super(message);
-    this.message = message;
+    super(message)
+    this.message = message
   }
 }
 
@@ -63,11 +63,11 @@ export class NotFoundException extends Error {
    * does not exist. Servers may also send this response instead of 403
    * to hide the existence of a resource from an unauthorized client.
    */
-  message: string;
-  status: number = 404;
+  message: string
+  status: number = 404
   constructor(message: string = 'NotFound') {
-    super(message);
-    this.message = message;
+    super(message)
+    this.message = message
   }
 }
 

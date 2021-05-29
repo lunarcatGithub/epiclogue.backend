@@ -1,4 +1,4 @@
-import { cleanEnv, port, str, num } from 'envalid';
+import { cleanEnv, port, str, num } from 'envalid'
 
 const validateEnv = () => {
   cleanEnv(process.env, {
@@ -38,7 +38,7 @@ const validateEnv = () => {
 
     // Slack
     SLACK_WEBHOOK: str(),
-  });
-};
+  })
+}
 
-export default validateEnv;
+export default validateEnv

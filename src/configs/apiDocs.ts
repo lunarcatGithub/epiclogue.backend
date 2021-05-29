@@ -1,4 +1,4 @@
-import swaggerJSDoc from 'swagger-jsdoc';
+import swaggerJSDoc from 'swagger-jsdoc'
 
 const swaggerDefinition = {
   info: {
@@ -10,13 +10,13 @@ const swaggerDefinition = {
   host: 'api.epiclogue.com', // Host (optional)
   basePath: '/', // Base path (optional)
   schemes: ['https'],
-};
+}
 
 const options = {
   swaggerDefinition,
   apis: ['../../apidoc.yaml'],
-};
+}
 
-const swaggerSpec = swaggerJSDoc(options);
+const swaggerSpec = swaggerJSDoc(options)
 
-export default swaggerSpec;
+export default swaggerSpec

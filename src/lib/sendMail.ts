@@ -1,17 +1,17 @@
-import 'dotenv/config';
-import mailer from 'nodemailer';
-import AWS from 'aws-sdk';
+import 'dotenv/config'
+import mailer from 'nodemailer'
+import AWS from 'aws-sdk'
 
-const { AWS_SES_ID, AWS_SES_SECRET, AWS_SES_REGION } = process.env;
+const { AWS_SES_ID, AWS_SES_SECRET, AWS_SES_REGION } = process.env
 
 const SES = new AWS.SES({
   apiVersion: '2010-12-01',
   accessKeyId: AWS_SES_ID,
   secretAccessKey: AWS_SES_SECRET,
   region: AWS_SES_REGION,
-});
+})
 
-const transporter = mailer.createTransport({ SES });
+const transporter = mailer.createTransport({ SES })
 
 export const emailText = (email: string, authToken: string) => `
   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -88,7 +88,7 @@ export const emailText = (email: string, authToken: string) => `
   </body>
   
   </html>
-`;
+`
 
 export const findPassText = (email: string, authToken: string) => `
     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -150,6 +150,6 @@ export const findPassText = (email: string, authToken: string) => `
     </body>
     
     </html>
-  `;
+  `
 
-export default transporter;
+export default transporter
