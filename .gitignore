@@ -1,0 +1,25 @@
+# modules
+node_modules
+
+# setting files
+.env
+.node-version
+
+# etc
+.DS_Store
+.eslintrc.js
+data
+coverage
+test.js
+.vscode
+yarn-error.log
+src/lib/aws.config.json
+
+# logs
+logs
+
+# mongoUri
+mongodb
+
+# build
+build
