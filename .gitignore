@@ -18,8 +18,8 @@ src/lib/aws.config.json
 # logs
 logs
 
-# mongoUri
-mongodb
+# mongokey
+mongodb.key
 
 # build
 build
