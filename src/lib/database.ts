@@ -1,11 +1,8 @@
-import dotenv from 'dotenv'
+import 'dotenv/config'
 import mongoose from 'mongoose'
-import dotenvExpand from 'dotenv-expand'
 import { MongoMemoryServer } from 'mongodb-memory-server'
 
-import { logger } from '../configs/winston'
-
-dotenvExpand(dotenv.config())
+import { logger } from '../configs/winston.config'
 
 mongoose.Promise = global.Promise
 

@@ -1,9 +1,9 @@
 import { NextFunction, Request, Response } from 'express'
 import Slack from 'slack-node'
 
-import HttpException from '../lib/httpException'
-import { logger } from '../configs/winston'
-import IResponse from '../lib/apiResponser'
+import HttpException from './httpException'
+import { logger } from '../../configs/winston.config'
+import IResponse from '../middlewares/response.mw'
 
 const errorMiddleware = (error: HttpException, req: Request, res: Response, next: NextFunction) => {
   const status: number = error.status || 500

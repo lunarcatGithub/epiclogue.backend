@@ -1,12 +1,12 @@
 import 'dotenv/config'
 
 import app from './app'
-import { logger } from './configs/winston'
+import { logger } from './configs/winston.config'
 import validateEnv from './lib/validateEnv'
 
 validateEnv()
 
-const PORT: number = parseInt(process.env.PORT, 10) || 3000
+const PORT = parseInt(process.env.PORT, 10) || 3000
 
 app.listen(PORT)
 

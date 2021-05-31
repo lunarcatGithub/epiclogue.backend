@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express'
 import UsersService from '../services/users.service'
-import IntResponse from '../lib/apiResponser'
+import IntResponse from '../lib/middlewares/response.mw'
 import { UserEntity } from '../domains/users.entity'
 import { UpdateUserDto, UserTokenDto } from '../dtos/users.dto'
 import MongoUsersRepository from '../repositories/mongo.users.repo'

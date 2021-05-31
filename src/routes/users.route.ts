@@ -1,6 +1,6 @@
 import { Router } from 'express'
 import UserController from '../controllers/users.ctrl'
-import { verifyToken } from '../middlewares/token-auth.mw'
+import { verifyToken } from '../lib/middlewares/token-auth.mw'
 
 const usersRouter = Router({ mergeParams: true })
 const userController = new UserController()

@@ -11,4 +11,4 @@
   ],
   "ext": "ts",
   "exec": "ts-node --transpile-only ./src/server.ts"
-} 
+}

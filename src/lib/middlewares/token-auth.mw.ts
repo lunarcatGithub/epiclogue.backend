@@ -1,10 +1,10 @@
 import 'dotenv/config'
 import Joi from 'joi'
 import { Request, Response, NextFunction } from 'express'
-import { UserTokenDto } from '../dtos/users.dto'
-import { UnauthorizedException } from '../lib/exceptions'
-import { jwtTokenVerifier } from '../lib/authToken'
-import HttpException from '../lib/httpException'
+import { UserTokenDto } from '../../dtos/users.dto'
+import { UnauthorizedException } from '../errors/exceptions'
+import { jwtTokenVerifier } from '../authToken'
+import HttpException from '../errors/httpException'
 
 // 예외 페이지들에 대한 route stack의 마지막 async function의 이름을 저장합니다.
 const authExceptions = [

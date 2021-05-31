@@ -2,7 +2,7 @@ import crypto from 'crypto'
 import util from 'util'
 
 import { UserEntity } from '../domains/users.entity'
-import { BadRequestException, ForbiddenException } from '../lib/exceptions'
+import { BadRequestException, ForbiddenException } from '../lib/errors/exceptions'
 import { AuthRepository } from '../repositories/auth.repo'
 import { JoinDto, SnsJoinDto } from '../dtos/users.dto'
 class AuthService {

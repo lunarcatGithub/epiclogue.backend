@@ -3,7 +3,7 @@ import util from 'util'
 import jwt from 'jsonwebtoken'
 
 import { UserEntity } from '../domains/users.entity'
-import { NotFoundException, BadRequestException, ForbiddenException } from '../lib/exceptions'
+import { NotFoundException, BadRequestException, ForbiddenException } from '../lib/errors/exceptions'
 import { UserProfileDto } from '../dtos/users.dto'
 import { UsersRepository } from '../repositories/users.repo'
 
